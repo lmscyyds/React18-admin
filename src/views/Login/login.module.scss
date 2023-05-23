@@ -1,0 +1,86 @@
+.loginPage {
+    position: relative;
+
+    .loginBox {
+        width: 450px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+
+        // 登录页表单样式
+        :global {
+
+            // 控制表单元素
+            .ant-input,
+            .ant-input-password {
+                background-color: rgba(255, 255, 255, 0);
+                border-color: #40a9ff;
+                color: #fff;
+                height: 38px;
+            }
+
+            .ant-input-password .ant-input {
+                height: 28px;
+            }
+
+            .ant-input::-webkit-input-placeholder,
+            .ant-input-password::-webkit-input-placeholder {
+                color: #fff;
+            }
+
+            // 控制眼睛图标
+            .ant-input-password-icon.anticon,
+            .ant-input-password-icon.anticon:hover {
+                color: #40a9ff;
+            }
+        }
+
+        .loginBtn {
+            height: 38px;
+        }
+
+        .captchaBox {
+            display: flex;
+
+            .captchaImg {
+                margin-left: 20px;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 22px;
+            text-align: center;
+            color: #fff;
+        }
+
+        p {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .title {
+            margin-bottom: 40px;
+            position: relative;
+
+            &:before,
+            &:after {
+                content: "";
+                width: 100px;
+                height: 2px;
+                position: absolute;
+                background: linear-gradient(to right, rgba(255, 255, 255, 0), #1976D2);
+                left: -20px;
+                top: 18px;
+            }
+
+            &:after {
+                left: auto;
+                background: linear-gradient(to left, rgba(255, 255, 255, 0), #1976D2);
+                right: -20px;
+            }
+        }
+    }
+}
